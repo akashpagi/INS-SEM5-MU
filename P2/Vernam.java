@@ -1,4 +1,7 @@
 import java.io.*;
+import java.util.Scanner;
+import java.util.*;
+
 public class Vernam {
 	
 	public static String stringEncryption(String text,String key)
@@ -57,11 +60,14 @@ public class Vernam {
 	}
 
 	public static void main(String[] args)
-	{
-		String plainText = "akash";
-		String key = "MONEY";
-		String encryptedText = stringEncryption(plainText.toUpperCase(), key.toUpperCase());
-		System.out.println("Cipher Text - "+ encryptedText);
-		System.out.println("Message - "+ stringDecryption(encryptedText,key.toUpperCase()));
+	{				 		
+                    Scanner sc= new Scanner(System.in);
+	System.out.println("Enter the message: ");
+	String plainText = sc.next();
+	System.out.println("Enter a key : ");
+	String key = sc.next();	
+	String encryptedText = stringEncryption(plainText.toUpperCase(), key.toUpperCase());
+	System.out.println("Cipher Text - "+ encryptedText);
+	System.out.println("Message - "+ stringDecryption(encryptedText,key.toUpperCase()));
 	}
 }
