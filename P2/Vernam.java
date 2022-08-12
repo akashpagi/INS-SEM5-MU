@@ -2,7 +2,8 @@ import java.io.*;
 import java.util.Scanner;
 import java.util.*;
 
-public class Vernam {
+public class Vernam
+ {
 	
 	public static String stringEncryption(String text,String key)
 	{
